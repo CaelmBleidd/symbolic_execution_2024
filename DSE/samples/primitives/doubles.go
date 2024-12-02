@@ -6,7 +6,7 @@ import (
 
 type DoubleExamples struct{}
 
-func (d *DoubleExamples) compareSum(a, b float64) float64 {
+func (d *DoubleExamples) CompareSum(a, b float64) float64 {
 	z := a + b
 	if z > 5.6 {
 		return 1.0
@@ -15,7 +15,7 @@ func (d *DoubleExamples) compareSum(a, b float64) float64 {
 	}
 }
 
-func (d *DoubleExamples) compare(a, b float64) float64 {
+func (d *DoubleExamples) Compare(a, b float64) float64 {
 	if a > b {
 		return 1.0
 	} else {
@@ -23,7 +23,7 @@ func (d *DoubleExamples) compare(a, b float64) float64 {
 	}
 }
 
-func (d *DoubleExamples) compareWithDiv(a, b float64) float64 {
+func (d *DoubleExamples) CompareWithDiv(a, b float64) float64 {
 	z := a + 0.5
 	if (a / z) > b {
 		return 1.0
@@ -32,7 +32,7 @@ func (d *DoubleExamples) compareWithDiv(a, b float64) float64 {
 	}
 }
 
-func (d *DoubleExamples) simpleSum(a, b float64) float64 {
+func (d *DoubleExamples) SimpleSum(a, b float64) float64 {
 	if math.IsNaN(a + b) {
 		return 0.0
 	}
@@ -44,7 +44,7 @@ func (d *DoubleExamples) simpleSum(a, b float64) float64 {
 	}
 }
 
-func (d *DoubleExamples) sum(a, b float64) float64 {
+func (d *DoubleExamples) Sum(a, b float64) float64 {
 	if math.IsNaN(a + b) {
 		return 0.0
 	}
@@ -56,7 +56,7 @@ func (d *DoubleExamples) sum(a, b float64) float64 {
 	}
 }
 
-func (d *DoubleExamples) simpleMul(a, b float64) float64 {
+func (d *DoubleExamples) SimpleMul(a, b float64) float64 {
 	if math.IsNaN(a * b) {
 		return 0.0
 	}
@@ -67,7 +67,7 @@ func (d *DoubleExamples) simpleMul(a, b float64) float64 {
 	}
 }
 
-func (d *DoubleExamples) mul(a, b float64) float64 {
+func (d *DoubleExamples) Mul(a, b float64) float64 {
 	if math.IsNaN(a * b) {
 		return 0.0
 	}
@@ -80,18 +80,18 @@ func (d *DoubleExamples) mul(a, b float64) float64 {
 	}
 }
 
-func (d *DoubleExamples) checkNonInteger(a float64) float64 {
+func (d *DoubleExamples) CheckNonInteger(a float64) float64 {
 	if a > 0.1 && a < 0.9 {
 		return 1.0
 	}
 	return 0.0
 }
 
-func (d *DoubleExamples) div(a, b, c float64) float64 {
+func (d *DoubleExamples) Div(a, b, c float64) float64 {
 	return (a + b) / c
 }
 
-func (d *DoubleExamples) simpleEquation(a float64) int {
+func (d *DoubleExamples) SimpleEquation(a float64) int {
 	if a+a+a-9 == a+3 {
 		return 0
 	} else {
@@ -99,7 +99,7 @@ func (d *DoubleExamples) simpleEquation(a float64) int {
 	}
 }
 
-func (d *DoubleExamples) simpleNonLinearEquation(a float64) int {
+func (d *DoubleExamples) SimpleNonLinearEquation(a float64) int {
 	if 3*a-9 == a+3 {
 		return 0
 	} else {
@@ -107,7 +107,7 @@ func (d *DoubleExamples) simpleNonLinearEquation(a float64) int {
 	}
 }
 
-func (d *DoubleExamples) checkNaN(dValue float64) int {
+func (d *DoubleExamples) CheckNaN(dValue float64) int {
 	if dValue < 0 {
 		return -1
 	}
@@ -121,14 +121,14 @@ func (d *DoubleExamples) checkNaN(dValue float64) int {
 	return 100
 }
 
-func (d *DoubleExamples) unaryMinus(dValue float64) int {
+func (d *DoubleExamples) UnaryMinus(dValue float64) int {
 	if -dValue < 0 {
 		return -1
 	}
 	return 0
 }
 
-func (d *DoubleExamples) doubleInfinity(dValue float64) int {
+func (d *DoubleExamples) DoubleInfinity(dValue float64) int {
 	if dValue == math.Inf(1) {
 		return 1
 	}
