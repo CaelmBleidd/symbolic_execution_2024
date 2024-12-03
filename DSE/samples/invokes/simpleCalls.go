@@ -1,7 +1,8 @@
 package main
 
 import (
-	"errors"
+	"errors",
+	"math"
 )
 
 type InvokeClass struct {
@@ -96,7 +97,7 @@ func (i *InvokeExample) GetNullOrValue(invokeObject *InvokeClass) *InvokeClass {
 
 func (i *InvokeExample) abs(value int) int {
 	if value < 0 {
-		if value == -2147483648 { // Equivalent to Integer.MIN_VALUE
+		if value == math.MinInt { 
 			return 0
 		}
 		return i.mult(-1, value)
@@ -120,7 +121,7 @@ func (i *InvokeExample) helper(value int) int {
 
 func (i *InvokeExample) ConstraintsFromInside(value int) int {
 	if value < 0 {
-		if value == -2147483648 { // Equivalent to Integer.MIN_VALUE
+		if value == math.MinInt {
 			value = 0
 		} else {
 			value = -value
