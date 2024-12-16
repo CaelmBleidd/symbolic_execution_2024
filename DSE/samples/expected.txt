@@ -1,0 +1,32 @@
+Список названий методов, которые должны уметь исполняться при помощи DSE: 
+
+
+ReallyMultiDimensionalArray
+IsIdentityMatrix
+
+CreateArray from ArraysOfObjects
+ObjectArray
+
+DefaultIntValues
+ShortSizeAndIndex
+
+LoopWithSymbolicBoundAndComplexControlFlow
+
+Fib
+
+Mul
+CheckNaN
+
+ShortOverflow
+
+SimpleFormula
+
+ArrayCopyExample
+
+WriteObjectField
+
+Example
+CompareTwoIdenticalObjectsFromArguments
+WriteToRefTypeField
+ReadFromRefTypeField
+WriteToArrayField

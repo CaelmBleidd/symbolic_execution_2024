@@ -1,7 +1,7 @@
 package main
 
 import (
-	"errors",
+	"errors"
 	"math"
 )
 
@@ -97,7 +97,7 @@ func (i *InvokeExample) GetNullOrValue(invokeObject *InvokeClass) *InvokeClass {
 
 func (i *InvokeExample) abs(value int) int {
 	if value < 0 {
-		if value == math.MinInt { 
+		if value == math.MinInt {
 			return 0
 		}
 		return i.mult(-1, value)
